@@ -1,19 +1,27 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import "../assets/landing.css";
+import "../assets/contactform.css";
 
-const glowBox = ref(null)
-const isVisible = ref(false)
 const activeDropdown = ref<string | null>(null);
+
+const glowBox = ref<HTMLElement | null>(null)
+const isVisible = ref(false)
 
 onMounted(() => {
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
         isVisible.value = true
+        glowBox.value?.classList.add('glow-on-scroll')
+        glowBox.value?.classList.remove('glow-off')
+      } else {
+        isVisible.value = false
+        glowBox.value?.classList.remove('glow-on-scroll')
+        glowBox.value?.classList.add('glow-off')
       }
     },
-    { threshold: 0.5 }
+    { threshold: 0.4 }
   )
 
   if (glowBox.value) {
@@ -134,6 +142,9 @@ onMounted(() => {
               <button class="secondary-btn">Why Choose this LMS ?</button>
             </RouterLink>
           </div>
+        </div>
+        <div class="hero-image">
+            <img src="../hero.jpg" alt="EduSync Illustration"></img>
         </div>
       </section>
       <section class="contact-section">

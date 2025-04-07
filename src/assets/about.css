@@ -11,7 +11,7 @@
 }
 
 .Aboutpage{
-  background-color: #1a1a1a;
+  background-color: black;
   height: 100%;
 }
 
@@ -47,7 +47,7 @@ a{
 
 .navbar-title:hover {
   transform: scale(1.08);
-  text-shadow: 0 0 8px #b1d034aa;
+  text-shadow: 0 0 8px #c3ff00;
 }
 
 .nav-links {
