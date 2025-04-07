@@ -40,7 +40,7 @@ body, html, #app {
 .navbar {
   width: 90%;
   height: 60px;
-  background: rgba(0, 0, 0, 0.85);
+  background: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,9 +48,11 @@ body, html, #app {
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* enhancement */
+  box-shadow: 0 2px 10px black; /* enhancement */
   flex-direction: row;
   justify-content: space-between;
+  border: 0.3px solid white;
+  border-radius: 10px;
 }
 
 a{
@@ -153,8 +155,10 @@ a{
   height: 16px;
   transition: transform 0.3s ease;
   color: #ffffff;
+  text-decoration: underline;
 }
 .caret.open {
+  text-decoration: underline;
   transform: rotate(180deg);
 }
 
@@ -168,6 +172,7 @@ a{
 
 /* Hero Section */
 .hero {
+  margin-top: 10px;
   padding: 6rem 2rem;
   background: rgba(0, 0, 0, 0.55); /* updated */
   backdrop-filter: blur(6px); /* enhanced */
@@ -179,6 +184,12 @@ a{
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2rem;
 }
 
 .hero-inner {
@@ -205,8 +216,32 @@ a{
   max-width: 100%;
   height: auto;
   border-radius: 1rem; /* Optional for rounded edges */
-  box-shadow: 0 0 30px rgba(195, 255, 0, 0.2); /* Subtle glow effect */
+  box-shadow: 0 0 30px black; /* Subtle glow effect */
 }
+
+.hero-text,
+.hero-image img {
+  will-change: transform, opacity;
+}
+
+.hero-capsule {
+  width: 100%;
+  max-width: none;
+  background: whitesmoke;
+  padding: 3rem;
+  box-shadow: 0 0 30px #d4ff00;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 40px;
+  box-shadow: 0 0 30px rgba(192, 255, 0, 0.2);
+  gap: 2rem;
+  margin: auto;
+  width: 100%;
+}
+
 
 .hero-inner > *:nth-child(1) { animation-delay: 0.3s; }
 .hero-inner > *:nth-child(2) { animation-delay: 0.6s; }
@@ -223,20 +258,26 @@ a{
 /* Typography */
 .welcome-title {
   font-size: 1.7rem;
+  font-weight: bolder;
   margin-bottom: 1.5rem;
   color: #c3ff00;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+  text-shadow:
+        0 0 2px #000,        /* soft stroke */
+        0 0 4px #000,
+        0 0 6px #000,
+        0 0 3px #ccff00,     /* subtle glow */
+        0 0 6px #ccff00;
 }
 
 .description {
-  font-size: 1.125rem;
+  font-size: 1.250rem;
+  font-weight: bolder;
   line-height: 1.8;
   margin-bottom: 1rem;
-  color: white;
+  color: black;
   text-align: justify;
-  letter-spacing: 0.3px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0px;
 }
 
 /* CTA Buttons */
@@ -256,17 +297,20 @@ a{
   flex: 4 1 500px;
   padding: 0.8rem 2rem;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  min-height: 70px;
+  min-width: 200px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
   border: 2px solid transparent;
   background-image: linear-gradient(#c3ff00, #c3ff00),
-                    radial-gradient(circle at top left, #fff, #b1dd40);
+                    radial-gradient(circle at top left, black, #b1dd40);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   font-weight: bolder;
   color: #0f0f0f;
-  box-shadow: 0 0 0px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0px rgba(18, 17, 17, 0.6);
+  size: 5rem;
 }
 
 .primary-btn:hover,

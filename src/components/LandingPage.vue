@@ -2,8 +2,40 @@
 import { ref, onMounted } from "vue";
 import "../assets/landing.css";
 import "../assets/contactform.css";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const activeDropdown = ref<string | null>(null);
+
+gsap.registerPlugin(ScrollTrigger)
+
+const heroText = ref(null)
+const heroImage = ref(null)
+
+onMounted(() => {
+  gsap.from(heroText.value, {
+    scrollTrigger: {
+      trigger: heroText.value,
+      start: 'top 85%',
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1.2,
+    ease: 'power3.out',
+  })
+
+  gsap.from(heroImage.value, {
+    scrollTrigger: {
+      trigger: heroImage.value,
+      start: 'top 85%',
+    },
+    opacity: 0,
+    y: 80,
+    duration: 1.5,
+    ease: 'power3.out',
+    delay: 0.2,
+  })
+})
 
 const glowBox = ref<HTMLElement | null>(null)
 const isVisible = ref(false)
@@ -123,42 +155,44 @@ onMounted(() => {
     <main class="content">
       <!-- Hero Section -->
       <section class="hero">
-        <div class="hero-inner">
-          <h2 class="welcome-title">Welcome to EduSync - A Learning Management System</h2>
-          <p class="description">
-            Welcome to EduSync - A Learning Management System of EduSync — a dynamic digital platform designed to transform the educational experience for students, adult learners, instructors, and faculty members. 
-          </p>
-          <p class="description">
-            Built with a focus on flexibility, academic rigor, and user-friendliness, this LMS provides a centralized space for course delivery, student engagement, assessments, and certification.
-          </p>
-          <p class="description">
-            Whether you are beginning your academic journey or facilitating the learning of others, this platform is your trusted companion in the pursuit of knowledge and professional growth. 
-          </p>
-          <div class="cta-buttons">
-            <RouterLink to="/about">
-              <button class="primary-btn">About the Platform</button>
-            </RouterLink>
-            <RouterLink to="/why-choose">
-              <button class="secondary-btn">Why Choose this LMS ?</button>
-            </RouterLink>
-          </div>
-        </div>
-        <div class="hero-image">
-            <img src="../hero.jpg" alt="EduSync Illustration"></img>
+        <div class="hero-capsule">
+                <div class="hero-inner">
+                  <h2 class="welcome-title">Welcome to EduSync - A Learning Management System</h2>
+                  <p class="description">
+                    Welcome to EduSync - A Learning Management System of EduSync — a dynamic digital platform designed to transform the educational experience for students, adult learners, instructors, and faculty members. 
+                  </p>
+                  <p class="description">
+                    Built with a focus on flexibility, academic rigor, and user-friendliness, this LMS provides a centralized space for course delivery, student engagement, assessments, and certification.
+                  </p>
+                  <p class="description">
+                    Whether you are beginning your academic journey or facilitating the learning of others, this platform is your trusted companion in the pursuit of knowledge and professional growth. 
+                  </p>
+                  <div class="cta-buttons">
+                    <RouterLink to="/about">
+                      <button class="primary-btn">About the Platform</button>
+                    </RouterLink>
+                    <RouterLink to="/why-choose">
+                      <button class="secondary-btn">Why Choose this LMS ?</button>
+                    </RouterLink>
+                  </div>
+                </div>  
+                <div class="hero-image">
+                    <img src="/hero.jpg" alt="EduSync Illustration"></img>
+                </div>
         </div>
       </section>
       <section class="contact-section">
-          <div ref="glowBox" :class="['glow-box', { 'glow-on-scroll': isVisible }]">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-              <input type="text" placeholder="Your name" required />
-              <input type="email" placeholder="Your email" required />
-              <input type="tel" placeholder="Your phone number" required />
-              <textarea placeholder="Your message..." rows="4" required></textarea>
-              <button type="submit" class="glow-button">Send Message</button>
-            </form>
-          </div>
-        </section>
+              <div ref="glowBox" :class="['glow-box', { 'glow-on-scroll': isVisible }]">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                  <input type="text" placeholder="Your name" required />
+                  <input type="email" placeholder="Your email" required />
+                  <input type="tel" placeholder="Your phone number" required />
+                  <textarea placeholder="Your message..." rows="4" required></textarea>
+                  <button type="submit" class="glow-button">Send Message</button>
+                </form>
+              </div>
+      </section>
     </main>
-  </div>
+  </div> 
 </template>
