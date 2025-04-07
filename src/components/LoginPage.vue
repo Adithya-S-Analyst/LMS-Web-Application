@@ -22,7 +22,7 @@ const handleLogin = () => {
   <div class="login-page">  <!-- Ensuring correct background color -->
     <div class="main-content">
       <div class="left-section">
-        <img src="/edusync1.png" alt="EduSync Logo" class="main-logo" />
+        <img src="/edusync1.jpg" alt="EduSync Logo" class="main-logo" />
       </div>
       <div class="right-section">
         <div class="login-container">

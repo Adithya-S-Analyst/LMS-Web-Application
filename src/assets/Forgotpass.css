@@ -1,5 +1,5 @@
 :root {
-    --background-color: #b1dd40;
+    --background-color: #c3ff00;
     --text-color: #333;
     --input-bg: white;
     --button-bg: #333;
@@ -17,7 +17,7 @@
   }
 
 .forgot-password-page{
-    background-color: #b1dd40 !important;  /* Force background color */
+    background-color: #c3ff00 !important;  /* Force background color */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -72,7 +72,7 @@
     width: 100%;
     padding: 0.8rem;
     background-color: var(--button-bg);
-    color: #b1dd40;
+    color: #c3ff00;
     border: none;
     border-radius: 5px;
     cursor: pointer;

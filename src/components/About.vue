@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import "../assets/landing.css";
 import "../assets/about.css";
 import gsap from "gsap";
 
@@ -70,7 +69,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="landing-page">
+  <div class="Aboutpage">
     <!-- Navbar -->
     <nav class="navbar">
       <RouterLink to="/dashboard">

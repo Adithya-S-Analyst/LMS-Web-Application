@@ -61,7 +61,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="landing-page">
+  <div class="Whypage">
     <!-- Navbar -->
     <nav class="navbar">
       <RouterLink to="/dashboard">
@@ -122,19 +122,15 @@ onMounted(() => {
     </nav>
     <main class="why-choose">
         <h2 class="why-title">WHY CHOOSE THIS LMS?</h2>
-    <p class="why-intro">
-      In an era where digital transformation defines educational success, this LMS empowers all users with:
-    </p>
-
-    <div class="features-grid">
-      <div class="feature-card" v-for="(feature, index) in features" :key="index">
-        <h3 class="feature-title">{{ feature.title }}</h3>
-        <p class="feature-description">{{ feature.description }}</p>
-      </div>
-    </div>
+          <p class="why-intro">
+            In an era where digital transformation defines educational success, this LMS empowers all users with:
+          </p>
+          <div class="features-grid">
+            <div class="feature-card" v-for="(feature, index) in features" :key="index">
+              <h3 class="feature-title">{{ feature.title }}</h3>
+              <p class="feature-description">{{ feature.description }}</p>
+            </div>
+          </div>
     </main>
-
-
-
-   </div>
+  </div>
 </template>

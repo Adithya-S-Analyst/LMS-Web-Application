@@ -6,9 +6,4 @@
     color: var(--text-color);
   }
   
-  /* Background for Landing Page Only */
-  .landing-page {
-    background-color: var(--background-color);
-    min-height: 100vh;
-  }
   
