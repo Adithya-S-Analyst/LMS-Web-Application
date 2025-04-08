@@ -5,6 +5,7 @@ import ForgotPass from '../components/ForgotPass.vue';
 import LandingPage from '../components/LandingPage.vue';
 import About from '../components/About.vue';
 import WhyChoose from '../components/WhyChoose.vue';
+import internshipPage from '../components/internshipPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/login' },
@@ -14,6 +15,7 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/dashboard', component: LandingPage },
   { path: '/about', component: About },
   { path: '/why-choose', component: WhyChoose },
+  { path: '/internship', component: internshipPage },
 ];
 
 const router = createRouter({

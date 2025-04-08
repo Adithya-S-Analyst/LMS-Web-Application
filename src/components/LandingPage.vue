@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import "../assets/landing.css";
 import "../assets/contactform.css";
+import "../assets/twohoverpanel.css";
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -89,6 +90,11 @@ onMounted(() => {
   document.addEventListener("keydown", handleEscape);
   document.addEventListener("click", closeDropdown);
 });
+
+function handleClick() {
+  
+}
+
 </script>
 
 <template>
@@ -146,7 +152,7 @@ onMounted(() => {
           <svg class="caret" :class="{ open: activeDropdown === 'profile' }" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
           <ul class="dropdown" :class="{ show: activeDropdown === 'profile' }">
             <li><a href="#">Settings</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="/login">Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -179,6 +185,40 @@ onMounted(() => {
                 <div class="hero-image">
                     <img src="/hero.jpg" alt="EduSync Illustration"></img>
                 </div>
+        </div>
+      </section>
+      <section class="hover-panels">
+        <div class="two-panel-wrapper">
+          <!-- Panel 1 -->
+          <div class="hover-panel" @click="handleClick">
+            <video class="panel-bg" autoplay muted loop playsinline>
+              <source src="https://cdn.dribbble.com/userupload/21248827/file/original-a0fdc09dac7834376e165a869089c773.mp4" type="video/mp4" />
+            </video>
+            <div class="panel-overlay">
+              <p class="panel-tag">INTERNSHIP</p>
+              <h3 class="panel-title">Reinventing Business with AI</h3>
+              <p class="panel-description">Gain real-world experience while solving industry challenges with innovation.</p>
+              <div class="intern-link">
+                <RouterLink to="/internship">
+                    <span>Learn More</span>
+                    <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 6 15 12 9 18" />
+                  </svg>
+                  
+                </RouterLink>
+            </div>
+            </div>
+          </div>
+          <!-- Panel 2 -->
+          <div class="hover-panel" @click="handleClick">
+            <div class="panel-bg" :style="{ backgroundImage: `url('https://cdn.dribbble.com/userupload/3157418/file/original-4e8f2a25fcf9279f318cc72eea9d8262.png?resize=1504x1128&vertical=center')` }"></div>
+            <div class="panel-overlay">
+              <p class="panel-tag">FULL COURSE</p>
+              <h3 class="panel-title">Future of Human-Tech Collaboration</h3>
+              <p class="panel-description">Master new tech and leadership skills that shape tomorrow’s world.</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contact-section">
