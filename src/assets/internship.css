@@ -34,11 +34,11 @@
     color: white;
   }
   
-  .hero-content1 .highlight {
+  .hero-content1 .highlight1 {
     color: #c3ff00;
   }
   
-  .hero-content1 .subtitle {
+  .hero-content1 .subtitle1 {
     font-size: 1.5rem;
     text-align: left;
     max-width: 600px;
@@ -46,7 +46,7 @@
     color: rgba(255, 255, 255, 0.8);
   }
   
-  .hero-content1 .cta-button {
+  .hero-content1 .cta-button1 {
     background: #c3ff00;
     color: #0a0a0a;
     border: none;
@@ -59,7 +59,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .hero-content1 .cta-button:hover {
+  .hero-content1 .cta-button1:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(195, 255, 0, 0.3);
   }
@@ -69,19 +69,19 @@
       font-size: 3rem;
     }
   
-    .hero-content1 .subtitle {
+    .hero-content1 .subtitle1 {
       font-size: 1.2rem;
     }
   }
 
-  .features {
+  .features1 {
     padding: 8rem 2rem;
     background-color: #0a0a0a;
     position: relative;
     overflow: hidden;
   }
   
-  .features::before {
+  .features1::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -93,7 +93,7 @@
     pointer-events: none;
   }
   
-  .features h2 {
+  .features1 h2 {
     text-align: center;
     margin-bottom: 4rem;
     color: white;
@@ -102,11 +102,11 @@
     position: relative;
   }
   
-  .features .highlight {
+  .features1 .highlight {
     color: #c3ff00;
   }
   
-  .features-grid {
+  .features-grid1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -114,7 +114,7 @@
     margin: 0 auto;
   }
   
-  .feature-item {
+  .feature-item1 {
     display: flex;
     align-items: center;
     padding: 2rem;
@@ -125,13 +125,13 @@
     transition: all 0.3s ease;
   }
   
-  .feature-item:hover {
+  .feature-item1:hover {
     transform: translateY(-5px);
     border-color: #c3ff00;
     box-shadow: 0 8px 20px rgba(195, 255, 0, 0.2);
   }
   
-  .checkmark {
+  .checkmark1 {
     color: #c3ff00;
     margin-right: 1rem;
     font-weight: bold;
@@ -140,11 +140,11 @@
   }
   
   @media (max-width: 768px) {
-    .features {
+    .features1 {
       padding: 4rem 1rem;
     }
   
-    .features h2 {
+    .features1 h2 {
       font-size: 2.5rem;
     }
   }
@@ -176,7 +176,7 @@
     position: relative;
   }
   
-  .certification .highlight {
+  .certification .highlight1 {
     color: #c3ff00;
   }
   
@@ -276,7 +276,7 @@
     position: relative;
   }
   
-  .eligibility .highlight {
+  .eligibility .highlight1 {
     color: #c3ff00;
   }
   

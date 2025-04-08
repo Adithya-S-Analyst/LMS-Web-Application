@@ -32,37 +32,37 @@ const eligibleGroups = [
   <section class="heromain">
         <div class="hero-content1">
             <h1 data-aos="fade-up">
-                <span class="highlight">Unlock</span> Your Potential.<br>
-                <span class="highlight">Upgrade</span> Your Skills.<br>
-                <span class="highlight">Shape</span> Your Future.
+                <span class="highlight1">Unlock</span> Your Potential.<br>
+                <span class="highlight1">Upgrade</span> Your Skills.<br>
+                <span class="highlight1">Shape</span> Your Future.
             </h1>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            <p class="subtitle1" data-aos="fade-up" data-aos-delay="200">
                 Our Internship & Full Course Training Program is a career-oriented platform
                 designed to empower Students, Fresh Graduates, and Working Professionals.
             </p>
-            <div class="cta-container" data-aos="fade-up" data-aos-delay="400">
-                <button class="cta-button">Get Started</button>
+            <div class="cta-container1" data-aos="fade-up" data-aos-delay="400">
+                <button class="cta-button1">Get Started</button>
             </div>
         </div>
   </section>
-  <section class="features">
-        <h2 data-aos="fade-down">What We <span class="highlight">Offer</span></h2>
-        <div class="features-grid">
+  <section class="features1">
+        <h2 data-aos="fade-down">What We <span class="highlight1">Offer</span></h2>
+        <div class="features-grid1">
         <div 
             v-for="(feature, index) in features" 
             :key="feature" 
-            class="feature-item"
+            class="feature-item1"
             :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
             :data-aos-delay="index * 100"
         >
-            <span class="checkmark">✓</span>
+            <span class="checkmark1">✓</span>
             {{ feature }}
         </div>
         </div>
   </section>
 
   <section class="certification">
-    <h2 data-aos="fade-down">Certification & <span class="highlight">Recognition</span></h2>
+    <h2 data-aos="fade-down">Certification & <span class="highlight1">Recognition</span></h2>
     <div class="certificates">
       <div 
         v-for="(cert, index) in certificates" 
@@ -80,7 +80,7 @@ const eligibleGroups = [
   </section>
 
   <section class="eligibility">
-    <h2 data-aos="fade-down">Who Can <span class="highlight">Apply?</span></h2>
+    <h2 data-aos="fade-down">Who Can <span class="highlight1">Apply?</span></h2>
     <div class="eligible-groups">
       <div 
         v-for="(group, index) in eligibleGroups" 
