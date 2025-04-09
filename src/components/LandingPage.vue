@@ -196,7 +196,7 @@ function handleClick() {
             </video>
             <div class="panel-overlay">
               <p class="panel-tag">INTERNSHIP</p>
-              <h3 class="panel-title">Reinventing Business with AI</h3>
+              <h3 class="panel-title">Kickstart Your Career Journey: Explore, Learn, and Grow</h3>
               <p class="panel-description">Gain real-world experience while solving industry challenges with innovation.</p>
               <div class="intern-link">
                 <RouterLink to="/internship">
@@ -205,7 +205,6 @@ function handleClick() {
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <polyline points="9 6 15 12 9 18" />
                   </svg>
-                  
                 </RouterLink>
             </div>
             </div>
@@ -217,6 +216,15 @@ function handleClick() {
               <p class="panel-tag">FULL COURSE</p>
               <h3 class="panel-title">Future of Human-Tech Collaboration</h3>
               <p class="panel-description">Master new tech and leadership skills that shape tomorrow’s world.</p>
+              <div class="intern-link">
+              <RouterLink to="/internship">
+                    <span>Learn More</span>
+                    <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 6 15 12 9 18" />
+                  </svg>
+              </RouterLink>
+            </div>
             </div>
           </div>
         </div>
