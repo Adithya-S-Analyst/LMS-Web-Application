@@ -204,7 +204,9 @@ function handleClick() {
       <section class="hero">
         <div class="hero-capsule">
                 <div class="hero-inner">
-                  <h2 class="welcome-title">Welcome to EduSync - A Learning Management System</h2>
+                  <h1>
+                    Welcome to <span class="highlight">EduSync</span> - A <span class="highlight">Learning Management System</span>
+                  </h1>
                   <p class="description">
                     Welcome to EduSync - A Learning Management System of EduSync — a dynamic digital platform designed to transform the educational experience for students, adult learners, instructors, and faculty members. 
                   </p>

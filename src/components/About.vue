@@ -29,7 +29,6 @@ const handleEscape = (e: KeyboardEvent) => {
   }
 };
 
-
   // Animate elements on page load
   gsap.from(".section-title, .section-description", {
     opacity: 0,

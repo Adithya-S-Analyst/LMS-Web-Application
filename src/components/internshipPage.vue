@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
 import { ref, onMounted } from "vue";
 import "../assets/internship.css";
 import "../assets/navbar.css";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const isMenuOpen = ref(false);
 
@@ -25,6 +25,12 @@ const closeDropdown = (event: MouseEvent) => {
 };
 
 onMounted(() => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+  
   const container = document.querySelector(".scroll-container");
   container?.scrollTo({ left: 0, behavior: "instant" });
 });

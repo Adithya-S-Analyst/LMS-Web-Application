@@ -4,12 +4,42 @@
     align-items: center;
     padding: 5rem 2rem;
     background-color: #000;
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
 }
 
 .glow-box h2{
     font-weight: bolder;
+}
+
+/* Contact Form Adjustments */
+.glow-box {
+    max-width: 500px; /* Reduced from larger size */
+    padding: 1.5rem; /* Reduced padding */
+}
+
+.contact-form {
+    gap: 0.8rem; /* Reduced spacing between fields */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.6rem 1rem; /* Smaller padding */
+    font-size: 1rem; /* Slightly smaller text */
+    max-width: 100%;
+}
+
+.glow-button {
+    padding: 0.75rem 1.5rem; /* Smaller button */
+    font-size: 1rem; /* Smaller text */
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .glow-box {
+        width: 90%;
+        padding: 1rem;
+    }
 }
 
 .contact-form {
@@ -46,12 +76,13 @@
     0%   { opacity: 0; transform: scale(0.98); box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
     30%  { opacity: 1; transform: scale(1.02); box-shadow: 0 0 40px 20px rgba(195, 255, 0, 0.4); }
     50%  { opacity: 0.8; transform: scale(1); box-shadow: 0 0 10px 4px rgba(195, 255, 0, 0.1); }
-    70%  { opacity: 1; transform: scale(1.01); box-shadow: 0 0 60px 30px rgba(195, 255, 0, 0.5); }
-    100% { opacity: 1; transform: scale(1); box-shadow: 0 0 80px 40px rgba(195, 255, 0, 0.6); }
+    70%  { opacity: 1; transform: scale(1.01); box-shadow: 0 0 15px 7.5px rgba(195, 255, 0, 0.5); }
+    100% { opacity: 1; transform: scale(1); box-shadow: 0 0 20px 10px rgba(195, 255, 0, 0.6); }
   }
   
   .glow-box {
-    width: 100%;
+    width: 100%; /* Changed from 50% */
+    max-width: 500px; /* Maintain reasonable max width */
     opacity: 0;
     border-radius: 0.75rem;
     max-width: 800px; /* Make it larger for more glow surface */
