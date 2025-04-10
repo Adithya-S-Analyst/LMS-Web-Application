@@ -4,10 +4,27 @@ import "../assets/landing.css";
 import "../assets/contactform.css";
 import "../assets/twohoverpanel.css";
 import "../assets/navbar.css";
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
+const isMenuOpen = ref(false);
 const activeDropdown = ref<string | null>(null);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+    activeDropdown.value = null;
+  }
+};
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+  activeDropdown.value = null;
+  document.body.style.overflow = '';
+};
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -78,18 +95,35 @@ onMounted(() => {
   container?.scrollTo({ left: 0, behavior: "instant" });
 });
 
-document.addEventListener("click", closeDropdown);
-
 onMounted(() => {
   const container = document.querySelector(".scroll-container");
   container?.scrollTo({ left: 0, behavior: "instant" });
 
   const handleEscape = (e: KeyboardEvent) => {
-    if (e.key === "Escape") activeDropdown.value = null;
+    if (e.key === "Escape") {
+      closeMenu();
+    }
+  };
+
+  const handleClickOutside = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    const isNavClick = target.closest('.nav-item');
+    const isHamburgerClick = target.closest('.hamburger');
+
+    if (!isNavClick && !isHamburgerClick && isMenuOpen.value) {
+      closeMenu();
+    } else if (!isNavClick) {
+      activeDropdown.value = null;
+    }
   };
 
   document.addEventListener("keydown", handleEscape);
-  document.addEventListener("click", closeDropdown);
+  document.addEventListener("click", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("keydown", handleEscape);
+    document.removeEventListener("click", handleClickOutside);
+  };
 });
 
 function handleClick() {
@@ -105,7 +139,13 @@ function handleClick() {
       <RouterLink to="/dashboard">
         <h2 class="navbar-title">EduSync</h2>
       </RouterLink>
-      <ul class="nav-links">
+      <div class="hamburger" @click.stop="toggleMenu" :class="{ open: isMenuOpen }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" :class="{ 'show-menu': isMenuOpen }">
+      <div class="overlay" :class="{ show: isMenuOpen }" @click="closeMenu"></div>
         <li class="nav-item" @click.stop="toggleDropdown('courses')">
           <a href="#">Courses</a>
           <svg class="caret" :class="{ open: activeDropdown === 'courses' }" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
