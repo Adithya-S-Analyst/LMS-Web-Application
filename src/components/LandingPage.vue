@@ -144,8 +144,8 @@ function handleClick() {
         <span></span>
         <span></span>
       </div>
-      <ul class="nav-links" :class="{ 'show-menu': isMenuOpen }">
       <div class="overlay" :class="{ show: isMenuOpen }" @click="closeMenu"></div>
+      <ul class="nav-links" :class="{ 'show-menu': isMenuOpen }">
         <li class="nav-item" @click.stop="toggleDropdown('courses')">
           <a href="#">Courses</a>
           <svg class="caret" :class="{ open: activeDropdown === 'courses' }" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>

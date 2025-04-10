@@ -77,15 +77,18 @@
   .dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(0.5rem);
     background: rgba(20, 20, 20, 0.98);
     list-style: none;
-    padding: 0.5rem 0;
-    min-width: 220px;
+    padding: 0.5rem;
+    min-width: max-content;
     border-radius: 0.5rem;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(0.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     transition: all var(--transition-speed) cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
     z-index: 1001;
@@ -95,7 +98,7 @@
   .dropdown.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   
   .dropdown li {
@@ -117,7 +120,7 @@
   
   .dropdown li a:hover {
     color: var(--highlight-color);
-    padding-left: 1.75rem;
+    transform: translateY(-2px);
   }
   
   /* Caret Icon Improvements */
@@ -168,13 +171,15 @@
   }
   
   /* Mobile Responsive Styles */
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .hamburger {
       display: flex;
     }
     
     .nav-links {
       display: none;
+      opacity: 0;
+      visibility: hidden;
       position: fixed;
       top: var(--navbar-height);
       left: 0;
@@ -182,16 +187,21 @@
       background: rgba(0, 0, 0, 0.98);
       flex-direction: column;
       width: 100%;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       max-height: calc(100vh - var(--navbar-height));
       overflow-y: auto;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
+      z-index: 2000;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     
     .nav-links.show-menu {
       display: flex;
+      opacity: 1;
+      visibility: visible;
       animation: slideDown 0.4s ease-out forwards;
     }
     
@@ -199,30 +209,45 @@
       justify-content: center;
       width: 100%;
       text-align: center;
-      padding: 1rem 0;
+      padding: 1.2rem 0;
+      transform: translateY(0);
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      margin: 0 1rem;
+    }
+
+    .nav-item.slide-down {
+      transform: translateY(10px);
     }
     
     .dropdown {
-      position: static;
-      background: rgba(255, 255, 255, 0.05);
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0.5rem 0;
-      width: 100%;
+      position: relative;
+      background: rgba(20, 20, 20, 0.95);
+      margin: 0;
+      width: 90%;
       max-height: 0;
       overflow: hidden;
-      transform: none;
-      transition: max-height 0.3s ease, padding 0.3s ease;
+      transform: translateY(-10px);
+      flex-direction: column;
+      transition: all 0.3s ease;
+      border-radius: 0.5rem;
+      z-index: 1002;
+      left: 0;
+      opacity: 0;
     }
     
     .dropdown.show {
-      max-height: 500px; /* Adjust based on content */
+      max-height: none;
+      padding: 0.5rem 0;
+      margin: 0.5rem auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transform: translateY(0);
+      opacity: 1;
     }
     
     .dropdown li a {
-      padding: 0.75rem 1rem;
-      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
     }
   }
   
