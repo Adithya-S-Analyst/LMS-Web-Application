@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import "../assets/about.css";
+import "../assets/navbar.css";
 import gsap from "gsap";
 
 const activeDropdown = ref<string | null>(null);

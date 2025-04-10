@@ -3,6 +3,7 @@ import { ref, onMounted } from "vue";
 import "../assets/landing.css";
 import "../assets/contactform.css";
 import "../assets/twohoverpanel.css";
+import "../assets/navbar.css";
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 

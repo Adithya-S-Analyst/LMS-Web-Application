@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import "../assets/landing.css";
-import "../assets/whychoose.css"
+import "../assets/navbar.css";
+import "../assets/whychoose.css";
 
 const features = [
   {

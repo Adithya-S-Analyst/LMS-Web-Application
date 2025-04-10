@@ -2,6 +2,7 @@
 
 import { ref, onMounted } from "vue";
 import "../assets/internship.css";
+import "../assets/navbar.css";
 
 const activeDropdown = ref<string | null>(null);
 
