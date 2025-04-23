@@ -44,11 +44,11 @@
   
   .panel-overlay {
     position: absolute;
-    bottom: 30px;
+    top: 30px;
     left: 30px;
     color: white;
     z-index: 2;
-    width: 85%;
+    width: auto;
     transition: all 0.4s ease;
   }
   
@@ -66,6 +66,10 @@
     0 0 6px #000,
     0 0 3px #ccff00,     /* subtle glow */
     0 0 6px #ccff00;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: black;
   }
   
   .panel-title {
@@ -115,6 +119,10 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
+    text-shadow:
+    0 0 2px #000,        /* soft stroke */
+    0 0 4px #000,
+    0 0 6px #000;
     color: #c3ff00;
     cursor: pointer;
     opacity: 0;

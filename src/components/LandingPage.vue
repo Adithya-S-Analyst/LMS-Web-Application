@@ -236,7 +236,7 @@ function handleClick() {
         <div class="two-panel-wrapper">
           <!-- Panel 1 -->
           <div class="hover-panel" @click="handleClick">
-            <div class="panel-bg" :style="{ backgroundImage: `./intern.jpg` }"></div>
+            <div class="panel-bg" :style="{ backgroundImage: `url('/intern.jpg')` }"></div>
             <div class="panel-overlay">
               <p class="panel-tag">INTERNSHIP</p>
               <h3 class="panel-title">Kickstart Your Career Journey: Explore, Learn, and Grow</h3>

@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 2rem;
+    padding: 1rem 0.5rem;
     background-color: #000;
-    min-height: 50vh;
+    min-height: 30vh;
     width: 100%;
 }
 
@@ -14,7 +14,7 @@
 
 /* Contact Form Adjustments */
 .glow-box {
-    max-width: 500px; /* Reduced from larger size */
+    max-width: 150px; /* Reduced from larger size */
     padding: 1.5rem; /* Reduced padding */
 }
 
@@ -82,11 +82,10 @@
   
   .glow-box {
     width: 100%; /* Changed from 50% */
-    max-width: 500px; /* Maintain reasonable max width */
+    max-width: 700px; /* Increased max width for wider form */
     opacity: 0;
-    border-radius: 0.75rem;
     max-width: 800px; /* Make it larger for more glow surface */
-    padding: 6rem 3rem; /* More breathing space */
+    padding: 3rem 1.5rem; /* Reduced padding for compact layout */
     margin: 4rem auto;
     background-color: #c3ff00;
     transform: translateY(60px) scale(0.98);
