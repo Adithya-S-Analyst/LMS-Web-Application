@@ -80,7 +80,9 @@ onUnmounted(() => {
     <!-- Navbar -->
     <nav class="navbar">
       <RouterLink to="/dashboard">
-        <h2 class="navbar-title">EduSync</h2>
+        <div class="navbar-logo">
+          <img src="/FinalLogo.png" alt="EduSync"></img>
+        </div>
       </RouterLink>
       <div class="hamburger" @click="toggleMenu">
         <span></span>

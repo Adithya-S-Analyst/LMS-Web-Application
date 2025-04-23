@@ -7,6 +7,7 @@
   padding: 2rem;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .main-content {
@@ -15,6 +16,7 @@
   justify-content: space-between;
   width: 90%;
   max-width: 1300px;
+  flex-wrap: wrap;
 }
 
 .left-section {
@@ -22,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 300px;
 }
 
 .main-logo {
@@ -33,6 +36,7 @@
 .right-section {
   flex: 1.8;
   padding: 4rem;
+  min-width: 300px;
 }
 
 .login-container {
@@ -42,7 +46,7 @@
   border-radius: 12px;
   width: 100%;
   max-width: 600px;
-  min-width: 500px; 
+  min-width: 300px; 
   box-sizing: border-box;
 }
 
@@ -141,4 +145,115 @@ input {
   min-height: 70vh;
   display: flex;
   align-items: center;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .main-content {
+    width: 95%;
+  }
+  
+  .login-container {
+    padding: 2.5rem;
+  }
+  
+  .right-section {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+    width: 100%;
+    min-height: auto;
+    justify-content: center;
+  }
+  
+  .right-section {
+    padding: 2rem 1rem;
+  }
+  
+  .login-container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+  
+  .login-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 1.5rem;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .login-container {
+    min-width: 280px;
+    padding: 1.5rem;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .google-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 1rem;
+  }
+  
+  .login-container {
+    padding: 1.2rem;
+  }
+  
+  .login-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  input, .login-button, .google-button {
+    padding: 0.7rem;
+  }
+  
+  .google-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .signup-link {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Handle zoom responsiveness */
+@media screen and (min-resolution: 192dpi) {
+  .login-container {
+    padding: 2rem;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+  }
+  
+  input, .login-button, .google-button {
+    font-size: 0.9rem;
+  }
 }

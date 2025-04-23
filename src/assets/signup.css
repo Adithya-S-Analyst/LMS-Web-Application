@@ -8,11 +8,13 @@
 
 .signup-page {
     background-color: #c3ff00 !important;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .signup-page body {
@@ -32,17 +34,15 @@ body {
     background-color: rgba(255, 255, 255, 0.25);
     padding: 3rem;
     border-radius: 14px;
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    box-sizing: border-box;
 }
 
 h2 {
@@ -61,7 +61,7 @@ h2 {
 }
 
 input {
-    width: 500%;  /* Make inputs stretch to fit the container */
+    width: 100%;  /* Make inputs stretch to fit the container */
     padding: 1rem; /* Increase padding for a more modern look */
     font-size: 1.2rem;
     border: 2px solid #ddd;
@@ -105,4 +105,56 @@ input {
     border-radius: 6px;
     margin-top: 5px;
     display: block;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+    .signup-container {
+        padding: 2.5rem;
+        max-width: 500px;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-page {
+        padding: 1.5rem;
+    }
+    
+    .signup-container {
+        padding: 2rem;
+        max-width: 100%;
+    }
+    
+    input {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .signup-button {
+        padding: 0.8rem 0;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .input-group {
+        margin-bottom: 0.8rem;
+    }
+    
+    .password-hint {
+        font-size: 0.8rem;
+    }
 }

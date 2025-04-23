@@ -137,7 +137,9 @@ function handleClick() {
     <!-- Navbar -->
     <nav class="navbar">
       <RouterLink to="/dashboard">
-        <h2 class="navbar-title">EduSync</h2>
+        <div class="navbar-logo">
+          <img src="/FinalLogo.png" alt="EduSync"></img>
+        </div>
       </RouterLink>
       <div class="hamburger" @click.stop="toggleMenu" :class="{ open: isMenuOpen }">
         <span></span>
@@ -226,7 +228,7 @@ function handleClick() {
                   </div>
                 </div>  
                 <div class="hero-image">
-                    <img src="/hero.jpg" alt="EduSync Illustration"></img>
+                    <img src="https://img.freepik.com/free-vector/blog-post-concept-illustration_114360-244.jpg?t=st=1745421820~exp=1745425420~hmac=51680967831273cd5ce484a657b06369f906dd213bfb98c2095c37f550add71f&w=826" alt="EduSync Illustration"></img>
                 </div>
         </div>
       </section>
@@ -234,9 +236,7 @@ function handleClick() {
         <div class="two-panel-wrapper">
           <!-- Panel 1 -->
           <div class="hover-panel" @click="handleClick">
-            <video class="panel-bg" autoplay muted loop playsinline>
-              <source src="https://cdn.dribbble.com/userupload/21248827/file/original-a0fdc09dac7834376e165a869089c773.mp4" type="video/mp4" />
-            </video>
+            <div class="panel-bg" :style="{ backgroundImage: `url('https://cdn.dribbble.com/userupload/3157418/file/original-4e8f2a25fcf9279f318cc72eea9d8262.png?resize=1504x1128&vertical=center')` }"></div>
             <div class="panel-overlay">
               <p class="panel-tag">INTERNSHIP</p>
               <h3 class="panel-title">Kickstart Your Career Journey: Explore, Learn, and Grow</h3>

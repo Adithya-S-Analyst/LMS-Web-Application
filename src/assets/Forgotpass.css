@@ -27,9 +27,10 @@
   
   .forgot-password-container {
     background-color: rgba(128, 128, 128, 0.6);
-    padding: 2.5rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 12px;
-    width: 580px;
+    width: 90vw;
+    max-width: 580px;
     text-align: center;
     left: 50%;
     top: 50%;
@@ -48,12 +49,14 @@
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--text-color);
+    word-break: break-word;
   }
   
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-color);
     margin-bottom: 1.5rem;
+    word-break: break-word;
   }
   
   input {
@@ -66,6 +69,7 @@
     margin-bottom: 1rem;
     box-sizing: border-box;
     text-align: left;
+    min-width: 0;
   }
   
   button {
@@ -96,4 +100,40 @@
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
     transform: scale(1.05);
   }
+  
+@media (max-width: 900px) {
+  .forgot-password-container {
+    width: 95vw;
+    max-width: 420px;
+    padding: 2rem 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .forgot-password-container {
+    width: 98vw;
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+    border-radius: 8px;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+  input {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
   
