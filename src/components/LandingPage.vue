@@ -210,7 +210,7 @@ function handleClick() {
                     Welcome to <span class="highlight">EduSync</span> - A <span class="highlight">Learning Management System</span>
                   </h1>
                   <p class="description">
-                    Welcome to EduSync - A Learning Management System of EduSync — a dynamic digital platform designed to transform the educational experience for students, adult learners, instructors, and faculty members. 
+                    Welcome to EduSync - A Learning Management System of EduSync - a dynamic digital platform designed to transform the educational experience for students, adult learners, instructors, and faculty members. 
                   </p>
                   <p class="description">
                     Built with a focus on flexibility, academic rigor, and user-friendliness, this LMS provides a centralized space for course delivery, student engagement, assessments, and certification.
