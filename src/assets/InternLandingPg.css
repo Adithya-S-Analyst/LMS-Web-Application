@@ -448,7 +448,6 @@ html {
   .cardintern:hover::before {
     opacity: 1;
   }
-  
   .cardintern-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -456,6 +455,10 @@ html {
     color: #c3ff00;
     position: relative;
   }
+  .cardintern-description {
+    color: #ffffff;
+  }
+  
   
   .tech-stack {
     display: flex;
