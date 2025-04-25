@@ -155,9 +155,9 @@ const eligibleGroups = [
                 designed to empower Students, Fresh Graduates, and Working Professionals.
             </p>
             <div class="cta-container1" data-aos="fade-up" data-aos-delay="400">
-              <Routerlink to="/internlanding">
+              <RouterLink to="/internlanding">
                 <button class="cta-button1">Get Started</button>
-              </Routerlink>
+              </RouterLink>
             </div>
         </div>
   </section>

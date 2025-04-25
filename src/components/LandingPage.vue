@@ -228,7 +228,7 @@ function handleClick() {
                   </div>
                 </div>  
                 <div class="hero-image">
-                    <img src="https://img.freepik.com/free-vector/blog-post-concept-illustration_114360-244.jpg?t=st=1745421820~exp=1745425420~hmac=51680967831273cd5ce484a657b06369f906dd213bfb98c2095c37f550add71f&w=826" alt="EduSync Illustration"></img>
+                    <img src="/hero.png" alt="EduSync Illustration"></img>
                 </div>
         </div>
       </section>
