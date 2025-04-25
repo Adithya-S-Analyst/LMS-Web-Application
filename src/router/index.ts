@@ -6,6 +6,7 @@ import LandingPage from '../components/LandingPage.vue';
 import About from '../components/About.vue';
 import WhyChoose from '../components/WhyChoose.vue';
 import internshipPage from '../components/internshipPage.vue';
+import InternLandingPage from '../components/InternshipLandingPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/login' },
@@ -16,6 +17,7 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/about', component: About },
   { path: '/why-choose', component: WhyChoose },
   { path: '/internship', component: internshipPage },
+  { path: '/internlanding', component: InternLandingPage},
 ];
 
 const router = createRouter({
