@@ -22,7 +22,6 @@ const closeDropdown = (event: MouseEvent) => {
   }
 };
 
-import { ref } from 'vue';
 
 const stats = [
   { number: '5000+', label: 'Successful Graduates' },

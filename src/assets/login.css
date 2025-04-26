@@ -8,6 +8,7 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  color: black
 }
 
 .main-content {
@@ -118,12 +119,12 @@ input {
   background: none;
 }
 
-.signup-link {
+.signup-linkl {
   text-align: center;
   margin-top: 2rem;
 }
 
-.signup-link a {
+.signup-linkl a {
   color: #111edc;
   text-decoration: none;
 }

@@ -43,7 +43,7 @@ const handleLogin = () => {
             <img src="/GoogleIcon.png" alt="Google Icon" class="google-icon" />
             Login with Google
           </button>
-          <div class="signup-link">
+          <div class="signup-linkl">
             Don't have an account?
             <router-link to="/signup" class="nav-link">Sign Up</router-link>
           </div>
