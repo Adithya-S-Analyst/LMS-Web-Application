@@ -8,7 +8,9 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  color: black
+  color: black;
+  overflow-x: hidden;   /* Prevent horizontal scroll */
+  overflow-y: auto;     /* Allow scroll if content overflows */
 }
 
 .main-content {
