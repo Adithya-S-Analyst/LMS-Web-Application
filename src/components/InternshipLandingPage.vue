@@ -260,7 +260,7 @@ const handleSubmit = (event: Event) => {
         <div class="gridintern">
           <div v-for="domain in projectDomains" :key="domain.title" class="cardintern">
             <h3 class="cardintern-title">{{ domain.title }}</h3>
-            <p>{{ domain.description }}</p>
+            <p class="cardintern-description">{{ domain.description }}</p>
             <div class="tech-stack">
               <span v-for="tech in domain.technologies" :key="tech" class="tech-tag">
                 {{ tech }}
@@ -327,7 +327,7 @@ const handleSubmit = (event: Event) => {
               id="program" 
               v-model="formData.program" 
               required 
-              class="form-inputi"
+              class="form-inputis"
             >
               <option value="">Select a program</option>
               <option value="software">Software Development</option>

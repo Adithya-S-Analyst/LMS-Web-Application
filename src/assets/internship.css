@@ -1,13 +1,47 @@
 
+.internpage {
+  background-color: #0a0a0a;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 60px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  width: 100%;
+}
+
+.internpage.menu-open {
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.nav-links.show-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #0a0a0a;
+  padding: 1rem;
+  z-index: 1000;
+}
+
 .heromain {
-    height: 100%;
+    min-height: calc(100vh - 80px);
     background-color: #0a0a0a;
     color: white;
     display: flex;
     align-items: center;
     padding: 2rem;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    margin-top: 20px;
+    z-index: 2;
+    width: 100%;
   }
   
   .heromain::before {
@@ -68,11 +102,36 @@
   
   @media (max-width: 768px) {
     .hero-content1 h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      margin-top: 80px;
     }
   
     .hero-content1 .subtitle1 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+    }
+    
+    .heromain {
+      min-height: 100vh;
+      padding: 1rem;
+      margin-top: 0;
+      padding-top: 60px;
+    }
+    
+    .hero-content1 {
+      width: 100%;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    .hero-content1 .cta-button1 {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .features1,
+    .certification,
+    .eligibility {
+      padding: 4rem 1rem;
     }
   }
 
@@ -144,10 +203,19 @@
   @media (max-width: 768px) {
     .features1 {
       padding: 4rem 1rem;
+      margin-top: 2rem;
     }
   
     .features1 h2 {
       font-size: 2.5rem;
+    }
+    
+    .features-grid1 {
+      grid-template-columns: 1fr;
+    }
+    
+    .feature-item1 {
+      padding: 1.5rem;
     }
   }
 
@@ -240,6 +308,7 @@
   @media (max-width: 768px) {
     .certification {
       padding: 4rem 1rem;
+      margin-top: 2rem;
     }
   
     .certification h2 {
@@ -248,6 +317,15 @@
   
     .quote {
       font-size: 1.2rem;
+      padding: 1rem;
+    }
+    
+    .certificates {
+      grid-template-columns: 1fr;
+    }
+    
+    .cert-item {
+      padding: 1.5rem;
     }
   }
 
@@ -312,12 +390,74 @@
   @media (max-width: 768px) {
     .eligibility {
       padding: 4rem 1rem;
+      margin-top: 2rem;
     }
   
     .eligibility h2 {
       font-size: 2.5rem;
     }
+    
+    .eligible-groups {
+      grid-template-columns: 1fr;
+    }
+    
+    .group-item {
+      padding: 1.5rem;
+    }
   }
+
+ 
+
+@media (max-width: 768px) {
+  .internpage {
+    background-color: #0a0a0a;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 60px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .heromain {
+    min-height: 100vh;
+    padding: 80px 1rem 2rem;
+    margin-top: 0;
+    overflow-y: visible;
+  }
+
+  .hero-content1 {
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .heromain h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+}
+
+ 
+
+@media (max-width: 768px) {
+  .internpage {
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+
+  .heromain {
+    min-height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero-content1 {
+    padding: 1rem;
+  }
+}
 
  
 

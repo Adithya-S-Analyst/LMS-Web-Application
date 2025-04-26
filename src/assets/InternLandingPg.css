@@ -59,6 +59,56 @@ html {
     overflow: hidden;
   }
   
+  @media (max-width: 768px) {
+    .herointern {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 2rem 0.5rem 1rem 0.5rem;
+      margin-top: 80px;
+      min-height: 60vh;
+      max-height: none;
+      text-align: left;
+    }
+    .herointern-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 0.5rem;
+      margin: 0;
+      text-align: left;
+    }
+    .hero-badge {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .herointern-title {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .herointern-subtitle {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .buttoni {
+      width: 100%;
+      max-width: 250px;
+      font-size: 1rem;
+      padding: 0.8rem 1.2rem;
+    }
+    .stats-grid {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .stat-item {
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0;
+    }
+  }
+  
   .herointern::before {
     content: '';
     position: absolute;
@@ -497,7 +547,6 @@ html {
     color: #ffffff;
   }
   
-  
   .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -532,6 +581,63 @@ html {
     backdrop-filter: blur(10px);
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .form-inputis{
+    background-color: #0f0f0f;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-groupis {
+    margin-bottom: 2rem;
+  }
+  
+  .form-groupis label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #c3ff00;
+    font-size: 1.1rem;
+  }
+  
+  .form-inputis {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .form-inputis option {
+    background-color: #0f0f0f;
+    color: #ffffff;
+  }
+  
+  .form-inputis:focus {
+    border-color: #c3ff00;
+    box-shadow: 0 0 0 4px rgba(195, 255, 0, 0.15);
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .form-inputis::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  textarea.form-inputis {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.6;
   }
   
   .form-groupi {
@@ -575,21 +681,41 @@ html {
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+  /* Tablet and smaller desktops */
+@media (max-width: 1024px) {
+    .containerintern {
+      padding: 0 1rem;
+    }
+    
+    .section-titleintern {
+      font-size: 2.5rem;
+    }
+    
+    .gridintern {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
     .herointern-title {
       font-size: 2.5rem;
+      line-height: 1.2;
     }
     
     .herointern-subtitle {
       font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
     
     .section-titleintern {
       font-size: 2.25rem;
+      margin-bottom: 2.5rem;
     }
     
     .cardintern {
-      padding: 2rem;
+      padding: 1.5rem;
     }
     
     .stat-number {
@@ -597,12 +723,14 @@ html {
     }
     
     .application-formintern {
-      padding: 2rem;
+      padding: 1.5rem;
     }
     
     .buttoni {
-      padding: 1rem 2rem;
+      padding: 0.8rem 1.8rem;
       font-size: 1rem;
+      width: 100%;
+      max-width: 300px;
     }
   
     .testimonial-nav {
@@ -612,31 +740,64 @@ html {
     }
   
     .testimonial-card {
-      padding: 2rem;
+      padding: 1.5rem;
     }
-  }
+
+    .sectionintern {
+      padding: 4rem 1rem;
+    }
+
+    .form-groupis {
+      margin-bottom: 1.5rem;
+    }
+}
   
-  @media (max-width: 480px) {
+  /* Small mobile devices */
+@media (max-width: 480px) {
     .herointern-title {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
     
     .section-titleintern {
       font-size: 1.75rem;
+      margin-bottom: 2rem;
     }
     
     .stat-item {
-      padding: 1.5rem;
+      padding: 1rem;
     }
     
     .testimonial-card {
-      padding: 1.5rem;
+      padding: 1rem;
     }
   
     .testimonial-nav {
-      width: 35px;
-      height: 35px;
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
+
+    .herointern {
+      padding: 2rem 1rem;
+    }
+
+    .cardintern-title {
+      font-size: 1.5rem;
+    }
+
+    .tech-tag {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    .form-groupis label {
       font-size: 1rem;
+    }
+
+    .form-inputis {
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
     }
   }
   
