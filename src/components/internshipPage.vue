@@ -141,25 +141,25 @@ const eligibleGroups = [
         </li>
       </ul>
     </nav>
-    <section class="heromain":class="{ 'menu-open': isMenuOpen }">
-          <div class="hero-content1":class="{ 'menu-open': isMenuOpen }">
+    <section class="heromain">
+          <div class="hero-content1">
               <h1 data-aos="fade-up">
                   <span class="highlight1">Unlock</span> Your Potential.<br>
                   <span class="highlight1">Upgrade</span> Your Skills.<br>
                   <span class="highlight1">Shape</span> Your Future.
               </h1>
-              <p class="subtitle1" data-aos="fade-up" data-aos-delay="200":class="{ 'menu-open': isMenuOpen }">
+              <p class="subtitle1" data-aos="fade-up" data-aos-delay="200">
                   Our Internship & Full Course Training Program is a career-oriented platform
                   designed to empower Students, Fresh Graduates, and Working Professionals.
               </p>
-              <div class="cta-container1" data-aos="fade-up" data-aos-delay="400":class="{ 'menu-open': isMenuOpen }">
+              <div class="cta-container1" data-aos="fade-up" data-aos-delay="400">
                 <RouterLink to="/internlanding">
                   <button class="cta-button1">Get Started</button>
                 </RouterLink>
               </div>
           </div>
     </section>
-    <section class="features1":class="{ 'menu-open': isMenuOpen }">
+    <section class="features1">
           <h2 data-aos="fade-down">What We <span class="highlight1">Offer</span></h2>
           <div class="features-grid1">
           <div 
@@ -169,36 +169,36 @@ const eligibleGroups = [
               :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
               :data-aos-delay="index * 100"
           >
-              <span class="checkmark1":class="{ 'menu-open': isMenuOpen }">✓</span>
+              <span class="checkmark1">✓</span>
               {{ feature }}
           </div>
           </div>
     </section>
-    <section class="certification":class="{ 'menu-open': isMenuOpen }">
-      <h2 data-aos="fade-down">Certification & <span class="highlight1":class="{ 'menu-open': isMenuOpen }">Recognition</span></h2>
-      <div class="certificates":class="{ 'menu-open': isMenuOpen }">
+    <section class="certification">
+      <h2 data-aos="fade-down">Certification & <span class="highlight1">Recognition</span></h2>
+      <div class="certificates">
         <div 
           v-for="(cert, index) in certificates" 
           :key="cert" 
-          class="cert-item":class="{ 'menu-open': isMenuOpen }"
+          class="cert-item"
           :data-aos="index % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'"
           :data-aos-delay="index * 100"
         >
           {{ cert }}
         </div>
       </div>
-      <p class="quote" data-aos="fade-up":class="{ 'menu-open': isMenuOpen }">
+      <p class="quote" data-aos="fade-up">
         "Certificates are not just a document, they are proof of your growth and skills."
       </p>
     </section>
 
-    <section class="eligibility":class="{ 'menu-open': isMenuOpen }">
-      <h2 data-aos="fade-down">Who Can <span class="highlight1":class="{ 'menu-open': isMenuOpen }">Apply?</span></h2>
+    <section class="eligibility">
+      <h2 data-aos="fade-down">Who Can <span class="highlight1">Apply?</span></h2>
       <div class="eligible-groups":class="{ 'menu-open': isMenuOpen }">
         <div 
           v-for="(group, index) in eligibleGroups" 
           :key="group" 
-          class="group-item":class="{ 'menu-open': isMenuOpen }"
+          class="group-item"
           :data-aos="'flip-up'"
           :data-aos-delay="index * 100"
         >

@@ -208,7 +208,6 @@ const handleSubmit = (event: Event) => {
         <h1 class="herointern-title">Launch Your Tech Career</h1>
         <p class="herointern-subtitle">Join our elite internship program and gain real-world experience in software development, design, and data science</p>
         <a href="#apply" class="buttoni">Apply Now</a>
-        
         <div class="stats-grid">
           <div v-for="stat in stats" :key="stat.number" class="stat-item">
             <div class="stat-number">{{ stat.number }}</div>
