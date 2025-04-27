@@ -152,9 +152,9 @@ function handleClick() {
           <a href="#">Courses</a>
           <svg class="caret" :class="{ open: activeDropdown === 'courses' }" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
           <ul class="dropdown" :class="{ show: activeDropdown === 'courses' }">
-            <li><a href="/internlanding">Web Development</a></li>
-            <li><a href="/internlanding">Data Science</a></li>
-            <li><a href="/internlanding">Machine Learning</a></li>
+            <li><a href="/internship">Web Development</a></li>
+            <li><a href="/internship">Data Science</a></li>
+            <li><a href="/internship">Machine Learning</a></li>
           </ul>
         </li>
         <li class="nav-item" @click.stop="toggleDropdown('analytics')">
