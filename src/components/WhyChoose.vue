@@ -74,7 +74,7 @@ onMounted(() => {
         <div class="navbar-logo">
           <img src="/FinalLogo.png" alt="EduSync"></img>
         </div>
-      </RouterLink>.
+      </RouterLink>
       <div class="hamburger" @click="toggleMenu">
         <span></span>
         <span></span>
@@ -128,7 +128,7 @@ onMounted(() => {
           <svg class="caret" :class="{ open: activeDropdown === 'profile' }" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
           <ul class="dropdown" :class="{ show: activeDropdown === 'profile' }">
             <li><a href="#">Settings</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="/login">Logout</a></li>
           </ul>
         </li>
       </ul>

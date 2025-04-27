@@ -1,4 +1,8 @@
-:root {
+.Whypage {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
   --text-color: #ffffff;
   --input-bg: rgba(255, 255, 255, 0.9);
   --button-bg: #1a1a1a;
@@ -10,19 +14,11 @@
   font-family: "Nordhead", sans-serif;
 }
 
-.Whypage{
-  background-color: black;
-  width: 100%;
-  height: 100%;
-}
-
 
 body, html, #app {
   width: 100%;
   height: 100%;
 }
-
-/* Navbar */
 
 .why-choose {
     background: rgba(0, 0, 0, 0.95);
@@ -33,11 +29,12 @@ body, html, #app {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    overflow-y: visible;
+    overflow-y: auto;
     z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-attachment: fixed;
   }
   
   .why-title {
@@ -61,42 +58,55 @@ body, html, #app {
   }
   
   .features-grid {
-    display: flex;
-    flex-direction: row;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
     justify-content: center;
     align-items: stretch;
-    margin-top: clamp(60px, 10vh, 105px);
+    margin-top: clamp(45px, 7.5vh, 79px);
     transition: all 0.3s ease;
     padding: clamp(1rem, 2vw, 2rem);
     width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-auto-rows: 1fr;
 }
 
-
 .feature-card {
-    position: sticky;
-    top: 20px;
-    height: 50%;
-    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(195, 255, 0, 0.2);
+    border-radius: 12px;
+    padding: clamp(1.125rem, 2.25vw, 1.5rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    backdrop-filter: blur(10px);
+    will-change: transform;
+    opacity: 1;
 }
   
   .feature-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px #c3ff00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(195, 255, 0, 0.3);
+    border-color: rgba(195, 255, 0, 0.5);
   }
   
   .feature-title {
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size: clamp(15px, 1.875vw, 21px);
     font-weight: 600;
     color: #c3ff00;
-    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1.2rem);
+    text-align: left;
   }
   
   .feature-description {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: clamp(12px, 1.35vw, 15px);
     color: #ccc;
     line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
   }
   
