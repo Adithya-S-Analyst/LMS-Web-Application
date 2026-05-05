@@ -1,5 +1,17 @@
-# Vue 3 + TypeScript + Vite
+LMS is a responsive frontend Learning Management System web application developed using Vue.js. 
+The project is designed to provide an engaging educational platform interface with smooth navigation, modern UI components, internship listings, and student-oriented accessibility.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Features :
+Responsive Landing Page
+Login and Sign-Up Interfaces
+About Us / Why Choose Us Sections
+Internship Listings Page
+Route-based Navigation
+GSAP Animations
+Mobile / Tablet / Desktop Responsive Design
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Tech Stack :
+Vue.js, HTML5, CSS, GSAP
+
+Live Demo :
+Deployed on Vercel
