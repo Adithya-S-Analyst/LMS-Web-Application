@@ -90,46 +90,10 @@ const eligibleGroups = [
       </div>
       <ul class="nav-links" :class="{ 'show-menu': isMenuOpen }">
         <li class="nav-item" @click.stop="toggleDropdown('courses')">
-          <a href="#">Courses</a>
-          <svg class="caret" :class="{ open: activeDropdown === 'courses' }" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
-          <ul class="dropdown" :class="{ show: activeDropdown === 'courses' }">
-            <li><a href="/internship">Web Development</a></li>
-            <li><a href="/internship">Data Science</a></li>
-            <li><a href="/internship">Machine Learning</a></li>
-          </ul>
+          <a href="/internship">About Us</a>
         </li>
         <li class="nav-item" @click.stop="toggleDropdown('analytics')">
-          <a href="#">Analytics</a>
-          <svg class="caret" :class="{ open: activeDropdown === 'analytics' }" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
-          <ul class="dropdown" :class="{ show: activeDropdown === 'analytics' }">
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Trends</a></li>
-            <li><a href="#">Performance</a></li>
-          </ul>
-        </li>
-        <li class="nav-item" @click.stop="toggleDropdown('enrolled')">
-          <a href="#">Enrolled Courses</a>
-          <svg class="caret" :class="{ open: activeDropdown === 'enrolled' }" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
-          <ul class="dropdown" :class="{ show: activeDropdown === 'enrolled' }">
-            <li><a href="#">My Courses</a></li>
-            <li><a href="#">Progress</a></li>
-          </ul>
-        </li>
-        <li class="nav-item" @click.stop="toggleDropdown('lab')">
-          <a href="#">Lab</a>
-          <svg class="caret" :class="{ open: activeDropdown === 'lab' }" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
-          <ul class="dropdown" :class="{ show: activeDropdown === 'lab' }">
-            <li><a href="#">Practice Problems</a></li>
-            <li><a href="#">Code Challenges</a></li>
-          </ul>
-        </li>
-        <li class="nav-item" @click.stop="toggleDropdown('certificates')">
-          <a href="#">Certificates</a>
-          <svg class="caret" :class="{ open: activeDropdown === 'certificates' }" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
-          <ul class="dropdown" :class="{ show: activeDropdown === 'certificates' }">
-            <li><a href="#">Earned Certificates</a></li>
-            <li><a href="#">Upcoming Certifications</a></li>
-          </ul>
+          <a href="/internlanding">Project Details and Internship</a>
         </li>
         <li class="nav-item" @click.stop="toggleDropdown('profile')">
           <a href="#">Profile</a>
